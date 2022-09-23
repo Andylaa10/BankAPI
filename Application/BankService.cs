@@ -1,7 +1,7 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs;
+using Application.Interfaces;
+using Application.Validators;
 using AutoMapper;
-using BankAPI;
-using BankAPI.DTOs;
 using Domain;
 using FluentValidation;
 

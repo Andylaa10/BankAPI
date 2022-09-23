@@ -1,7 +1,7 @@
-﻿using BankAPI.DTOs;
+﻿using Application.DTOs;
 using FluentValidation;
 
-namespace BankAPI;
+namespace Application.Validators;
 
 public class PutAccountValidation : AbstractValidator<PutAccountDTO>
 {

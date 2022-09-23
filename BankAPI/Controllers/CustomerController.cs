@@ -1,5 +1,5 @@
+using Application.DTOs;
 using Application.Interfaces;
-using BankAPI.DTOs;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,4 +1,4 @@
-﻿using BankAPI.DTOs;
+﻿using Application.DTOs;
 using Domain;
 
 namespace Application.Interfaces;

@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
+using Application.DTOs;
 using AutoMapper;
-using BankAPI.DTOs;
 using Domain;
 using FluentValidation;
 

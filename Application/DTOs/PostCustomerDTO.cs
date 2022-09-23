@@ -1,4 +1,4 @@
-﻿namespace BankAPI.DTOs;
+﻿namespace Application.DTOs;
 
 public class PostCustomerDTO
 {
