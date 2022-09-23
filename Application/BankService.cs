@@ -11,17 +11,17 @@ public class BankService : IBankService
 {
     private IBankRepository _repository;
     private IMapper _mapper;
-    private IValidator<PutCustomerValidation> _validationCustomerPut;
-    private IValidator<PostCustomerValidation> _validationCustomerPost;
-    private IValidator<PutAccountValidation> _validationAccountPut;
-    private IValidator<PostAccountValidator> _validationAccountPost;
+    private IValidator<PutCustomerDTO> _validationCustomerPut;
+    private IValidator<PostCustomerDTO> _validationCustomerPost;
+    private IValidator<PutAccountDTO> _validationAccountPut;
+    private IValidator<PostAccountDTO> _validationAccountPost;
 
     public BankService(IBankRepository repository, 
         IMapper mapper, 
-        IValidator<PutCustomerValidation> validationCustomerPut, 
-        IValidator<PostCustomerValidation> validationCustomerPost, 
-        IValidator<PutAccountValidation> validationAccountPut, 
-        IValidator<PostAccountValidator> validationAccountPost)
+        IValidator<PutCustomerDTO> validationCustomerPut, 
+        IValidator<PostCustomerDTO> validationCustomerPost, 
+        IValidator<PutAccountDTO> validationAccountPut, 
+        IValidator<PostAccountDTO> validationAccountPost)
     {
         _repository = repository;
         _mapper = mapper;

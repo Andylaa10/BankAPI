@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Infrastructure/1.0.0": {
+      "Application/1.0.0": {
         "dependencies": {
-          "Application": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.0-preview.7.22376.2",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0-preview.7.22376.2",
+          "AutoMapper": "11.0.1",
+          "Domain": "1.0.0",
+          "FluentValidation": "11.2.2",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0-rc.1.22426.10"
         },
         "runtime": {
-          "Infrastructure.dll": {}
+          "Application.dll": {}
         }
       },
       "AutoMapper/11.0.1": {
@@ -397,17 +397,6 @@
           }
         }
       },
-      "Application/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "11.0.1",
-          "Domain": "1.0.0",
-          "FluentValidation": "11.2.2",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0-rc.1.22426.10"
-        },
-        "runtime": {
-          "Application.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.0-preview.7.22376.2",
@@ -420,7 +409,7 @@
     }
   },
   "libraries": {
-    "Infrastructure/1.0.0": {
+    "Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -620,11 +609,6 @@
       "sha512": "sha512-GLEqLFFvwjQ0CndKFtDEEKEEvZ6E/9vlvsM13CqH8ihq61Y13o5BnZcNq/wosrECbbLwODf/A530Ra1g+fPZHg==",
       "path": "system.text.json/7.0.0-preview.7.22375.6",
       "hashPath": "system.text.json.7.0.0-preview.7.22375.6.nupkg.sha512"
-    },
-    "Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Domain/1.0.0": {
       "type": "project",

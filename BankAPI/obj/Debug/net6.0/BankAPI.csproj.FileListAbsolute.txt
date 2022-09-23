@@ -288,3 +288,4 @@ C:\Users\andyl\RiderProjects\BankAPI\BankAPI\bin\Debug\net6.0\Application.dll
 C:\Users\andyl\RiderProjects\BankAPI\BankAPI\bin\Debug\net6.0\Domain.dll
 C:\Users\andyl\RiderProjects\BankAPI\BankAPI\bin\Debug\net6.0\Application.pdb
 C:\Users\andyl\RiderProjects\BankAPI\BankAPI\bin\Debug\net6.0\Domain.pdb
+C:\Users\andyl\RiderProjects\BankAPI\BankAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
