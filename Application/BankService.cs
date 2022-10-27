@@ -1,6 +1,5 @@
 ﻿using Application.DTOs;
 using Application.Interfaces;
-using Application.Validators;
 using AutoMapper;
 using Domain;
 using FluentValidation;
@@ -96,5 +95,10 @@ public class BankService : IBankService
     public Account DeleteAccount(int accountId)
     {
         return _repository.DeleteAccount(accountId);
+    }
+
+    public void RebuildDB()
+    {
+        _repository.RebuildDB();
     }
 }

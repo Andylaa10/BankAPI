@@ -22,5 +22,7 @@ public interface IBankRepository
     
     //D
     Customer DeleteCustomer(int customerId);
-    Account DeleteAccount(int accountId); 
+    Account DeleteAccount(int accountId);
+
+    void RebuildDB();
 }

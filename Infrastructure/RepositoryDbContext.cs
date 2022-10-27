@@ -6,7 +6,7 @@ namespace Infrastructure;
 
 public class RepositoryDbContext : DbContext
 {
-    public RepositoryDbContext(DbContextOptions<RepositoryDbContext> options, ServiceLifetime serviceLifetime) : base(options)
+    public RepositoryDbContext(DbContextOptions<RepositoryDbContext> options) : base(options)
     {
     }
 
@@ -24,7 +24,16 @@ public class RepositoryDbContext : DbContext
             .WithMany(c => c.Accounts)
             .HasForeignKey(a => a.CustomerId)
             .OnDelete(DeleteBehavior.Cascade);
+        
+        //User builder 
+        modelBuilder.Entity<User>().Property(u => u.Id).ValueGeneratedOnAdd();
+        
+        //Makes the email unique
+        modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
 
+        //Insert data into database when create
+        #region Seeding
+        
         var c1 = new Customer{ Id = 1, FirstName = "Andy", LastName = "Johnson"};
         var c2 = new Customer{ Id = 2, FirstName = "Peter", LastName = "Ib"};
         var c3 = new Customer{ Id = 3, FirstName = "Bo", LastName = "Carlson"};
@@ -36,10 +45,14 @@ public class RepositoryDbContext : DbContext
         var a3 = new Account { Id  = 3, Amount = 222.2323F, AccountName = "Bo", CustomerId = c3.Id};
         var a4 = new Account { Id  = 4, Amount = 12.2323F, AccountName = "Thomas", CustomerId = c4.Id};
         modelBuilder.Entity<Account>().HasData(a1, a2, a3, a4);
+        
+
+        #endregion
     }
 
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Account> Accounts { get; set; }
+    public DbSet<User> Users { get; set; }
     
     
 

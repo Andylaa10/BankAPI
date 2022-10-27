@@ -1,12 +1,15 @@
 using Application.DTOs;
 using Application.Interfaces;
 using FluentValidation;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BankAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
+    [Route("[controller]")]
     public class CustomerController : ControllerBase
     {
         private IBankService _bankService;
@@ -27,6 +30,7 @@ namespace BankAPI.Controllers
             return Ok(_bankService.GetCustomer(id));
         }
 
+        [Authorize("AdminPolicy")]
         [HttpPost]
         public IActionResult CreateCustomer(PostCustomerDTO dto)
         {
@@ -66,6 +70,13 @@ namespace BankAPI.Controllers
         public IActionResult DeleteCustomer(int id)
         {
             return Ok(_bankService.DeleteCustomer(id));
+        }
+
+        [HttpGet]
+        [Route("rebuilddb")]
+        public void RebuildDB()
+        {
+            _bankService.RebuildDB();
         }
         
     }

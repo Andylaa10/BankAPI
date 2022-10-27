@@ -24,4 +24,6 @@ public interface IBankService
     //D
     Customer DeleteCustomer(int customerId);
     Account DeleteAccount(int accountId); 
+    
+    void RebuildDB();
 }
