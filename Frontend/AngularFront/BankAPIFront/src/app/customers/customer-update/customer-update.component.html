@@ -1,0 +1,28 @@
+<button title="Back" mat-mini-fab color="primary" routerLink="/customers" >
+  <mat-icon>keyboard_backspace</mat-icon>
+</button>
+<mat-card>
+  <form [formGroup]="customerForm" (ngSubmit)="save()">
+    <label for="id">
+      User ID:
+      <mat-form-field>
+        <input matInput id="id" type="text" formControlName="id" readonly>
+      </mat-form-field>
+    </label>
+    <br>
+    <label>
+      First Name:
+      <mat-form-field>
+        <input matInput type="text" placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+    </label>
+    <br>
+    <label>
+      Last Name:
+      <mat-form-field>
+        <input matInput type="text" placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </label>
+    <button id="btnSave" mat-button type="submit">Save</button>
+  </form>
+</mat-card>

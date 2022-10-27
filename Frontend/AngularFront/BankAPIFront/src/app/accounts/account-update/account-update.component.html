@@ -1,0 +1,17 @@
+<button mat-flat-button routerLink="/accounts">Back</button>
+
+<form [formGroup]="accountForm" (ngSubmit)="save()">
+  <label for="id">User ID: </label>
+  <br/>
+  <input [readOnly]="true" id="id" type="text" formControlName="id">
+  <label>
+    Account Name:
+    <input type="text" formControlName="accountName">
+  </label>
+  <label>
+    Amount:
+    <input type="text" formControlName="amount">
+  </label>
+
+  <button type="submit">Save</button>
+</form>

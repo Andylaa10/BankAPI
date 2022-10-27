@@ -1,0 +1,28 @@
+<button title="Back" mat-mini-fab color="primary" routerLink="/customers" >
+  <mat-icon>keyboard_backspace</mat-icon>
+</button>
+<mat-card>
+  <label>
+    First Name:
+    <mat-form-field>
+      <input matInput type="text" placeholder="First Name" [(ngModel)]="firstName">
+    </mat-form-field>
+  </label>
+  <br>
+  <label>
+    Last Name:
+    <mat-form-field>
+      <input matInput type="text" placeholder="Last Name" [(ngModel)]="lastName">
+    </mat-form-field>
+  </label>
+  <br>
+  <button id="btnSave" mat-button type="submit" (click)="save()">Save</button>
+</mat-card>
+
+<!---
+<button mat-button [matMenuTriggerFor]="menu">Accounts</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let a of accounts">{{a}}</button>
+</mat-menu>
+--->
+

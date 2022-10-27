@@ -1,0 +1,11 @@
+<button title="Back" mat-mini-fab color="primary" routerLink="/customers" >
+  <mat-icon>keyboard_backspace</mat-icon>
+</button>
+<h1>Customer Details</h1>
+<div *ngIf="customer">
+    <h2>{{customer.id}}</h2>
+    <h3>{{customer.firstName}} {{customer.lastName}}</h3>
+</div>
+<div *ngIf="!customer">
+    Customer not found
+</div>

@@ -1,0 +1,11 @@
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Email</mat-label>
+  <input [(ngModel)]="email" matInput placeholder="Ex@mail.com">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Password</mat-label>
+  <input [(ngModel)]="password" type="password" matInput placeholder="**********">
+</mat-form-field>
+<br>
+<button mat-raised-button (click)="login()">Log in</button>

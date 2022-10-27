@@ -1,0 +1,16 @@
+<button title="Add Account" mat-mini-fab color="primary" routerLink="/accounts-add" >
+  <mat-icon>add</mat-icon>
+</button>
+<div>
+  <mat-card *ngFor="let a of accounts">
+    <mat-card-title>{{a.accountName}}</mat-card-title>
+    <mat-card-subtitle>{{a.amount}}</mat-card-subtitle>
+    <mat-card-subtitle>account number: {{a.id}}</mat-card-subtitle>
+
+    <mat-card-actions>
+      <button title="Show details" id="btnUpdateAccount" mat-raised-button routerLink="/accounts/{{a.id}}">Details</button>
+      <button mat-raised-button color="accent" (click)="deleteAccount(a.id)">Delete</button>
+      <button mat-raised-button color="primary" routerLink="/accounts-update/{{a.id}}">Update</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
